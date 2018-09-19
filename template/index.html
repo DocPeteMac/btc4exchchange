@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BTC Exchanges</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,600" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/bootstrap-4.0.0.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="static/css/master.css">
+  </head>
+  <body>
+      <div>
+        <img src="static/images/Exch11.jpg" alt="" class="picture1">
+      </div>
+    
+<div class="container text-center">       
+  <button class="btn-success btn-lg" action="{{ url_for('index') }}">Get Data</button>
+</div>
+
+<div class="container text-center dreieck">
+  <img src="static/images/dreieck.png" alt="" style="width:20%">
+</div>
+
+<div class=" container"  style="font-weight: 100;">
+    The App does compare the Bitcoin value in US$ for different exchanges with an market capitalization at least over US$ 100,000
+</div>
+
+<div class=" container"  style="font-weight: 100;">
+    Click the button 'Get Data' again to collect refreshed life market data from exchanges. It can take 10   seconds or more to get the data depending on your connection speed. Every click on 'Get Data' will refresh the market data.
+</div>
+
+<!--Average and time-->
+
+<div class="container linegray">
+  <hr/>
+</div>
+
+<div style="color:rgb(0, 183, 255)">
+  <div class="row">
+    <div class="col text-right">Bitcoin.info as reference:</div>
+    <div>
+    </div>
+    <div class="col">{{btcinf}} US$</div>
+  </div>
+
+  <div class="row">
+    <div class="col text-right">Current local time:</div>
+    <div class="col">{{loctime}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col text-right">Average BTC value:</div>
+    <div class="col">{{averval}}</div>
+  </div>
+</div>
+
+<div class="container linered">
+  <hr/>
+</div>
+
+<!-- Max Min Exchanges -->
+
+<div>
+  <div class="row">
+    <div class="col text-right" style="color:rgb(247, 28, 72)">Exchange with minimum value</div>
+    <div class="col" style="color:rgb(6, 126, 6)">Exchange with maximum value</div>
+  </div>
+
+
+<div class="row" style="font-weight: 600;">
+  <div class="col text-right" style="color:rgb(247, 28, 72)">{{minexna}}</div>
+  <div class="col" style="color:rgb(6, 126, 6)">{{maxexna}}</div>
+</div>
+
+<div class="row" style="font-weight: 600;">
+  <div class="col text-right" style="color:rgb(247, 28, 72)">{{minexval}}</div>
+  <div class="col" style="color:rgb(6, 126, 6)">{{maxexval}}</div>
+</div>
+
+<div class="container linegreen">
+  <hr/>
+</div>
+
+<!-- Difference -->
+
+<div style="color:rgb(149, 151, 153)">
+  <div class="row">
+    <div class="col text-right">Difference in %</div>
+    <div class="col">{{diffproce}}</div>
+  </div>
+
+  <div class="row">
+    <div class="col text-right">Difference in US$</div>
+    <div class="col">{{diffusd}}</div>
+  </div>
+</div>
+
+<div class="container linegray">
+  <hr/>
+</div>
+
+<!-- Exchanges -->
+
+<div class="row">
+  <div class="col text-right">Bitstamp</div>
+  <div class="col" style="font-weight: 600">{{bitst}}</div>
+</div>
+
+<div class="row">
+  <div class="col text-right">Bitfinex</div>
+  <div class="col" style="font-weight: 600">{{bitfi}}</div>
+</div>
+
+<div class="row">
+  <div class="col text-right">Binance</div>
+  <div class="col" style="font-weight: 600">{{bina}}</div>
+</div>
+
+<div class="row">
+  <div class="col text-right">Bittrex</div>
+  <div class="col" style="font-weight: 600">{{bittre}}</div>
+</div>
+
+<div class="row">
+  <div class="col text-right">Coinbase</div>
+  <div class="col" style="font-weight: 600">{{coinb}}</div>
+</div>
+
+<div class="row">
+  <div class="col text-right">HitBTC</div>
+  <div class="col" style="font-weight: 600">{{hitb}}</div>
+</div>
+
+<div class="row">
+  <div class="col text-right">Kraken</div>
+  <div class="col" style="font-weight: 600">{{krak}}</div>
+</div>
+
+<div class="row">
+  <div class="col text-right">Poloniex</div>
+  <div class="col" style="font-weight: 600">{{polo}}</div>
+</div>
+<p></p>
+<p></p>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
